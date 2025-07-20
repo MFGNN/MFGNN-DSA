@@ -1,0 +1,51 @@
+# MFGNN-DSA
+we propose a novel model for drug-side effect association prediction, MFGNN-DSA, which leverages the powerful capabilities of heterogeneous information networks and graph neural networks to comprehensively capture multiple features of drugs and side effects
+
+# Requirements
+* python == 3.10.9
+* pytorch == 1.12.1
+* numpy==1.24.0
+* scikit-learn == 1.3.0
+
+
+# Files:
+1.data
+
+disease.csv:	Disease node information
+drug.csv:	Drug node information
+drug_smiles.csv:	SMILES representations of drugs
+label_end.txt:	Drug-side effect label list
+mat_drug_disease.csv:	Drug-disease association matrix
+mat_drug_se.csv:	Drug–side effect association matrix
+se.csv:	Side effect node information
+
+2.feature
+
+This folder contains the extracted attribute features and topological features of drugs and side effects, as well as their adjacency matrices:
+
+Adjacency_matrix_drug.txt:	Adjacency matrix for drug nodes
+Adjacency_matrix_se.txt:	Adjacency matrix for side effect nodes
+drug_hin_disease.csv:	topological features of drugs via heterogeneous information network
+drug_self.csv:	Self features of drugs
+se_hin_disease.csv:topological features of drugs via heterogeneous information network
+se_self.csv:	Self features of side effects
+
+3.Code
+
+
+# Train and test
+python main.py --epochs Your number --batch_size Your number
+
+epochs: Define the maximum number of epochs.
+
+batch_size: Define the number of batch size for training and testing.
+
+All files of Data and Code should be stored in the same folder to run the model.
+
+Example:
+
+```bash
+python main.py
+```
+# Contact
+If you have any questions or suggestions with the code, please let us know.
